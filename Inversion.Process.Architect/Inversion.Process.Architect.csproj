@@ -76,6 +76,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Architect\TaoBase.cs" />
     <Compile Include="Architect\TaoBehaviour.cs" />
     <Compile Include="Architect\Construct.cs" />
     <Compile Include="Architect\IListEx.cs" />

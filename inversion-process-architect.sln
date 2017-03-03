@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHarness1", "TestHarness
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inversion.Process.Architect.Tests", "Inversion.Process.Architect.Tests\Inversion.Process.Architect.Tests.csproj", "{C7E25F82-A4BE-4E2B-9400-9574925F7309}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inversion.Process.Architect.Web", "Inversion.Process.Architect.Web\Inversion.Process.Architect.Web.csproj", "{15A9342C-CEC4-4E3D-86DC-E716D6957DE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C7E25F82-A4BE-4E2B-9400-9574925F7309}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7E25F82-A4BE-4E2B-9400-9574925F7309}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7E25F82-A4BE-4E2B-9400-9574925F7309}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15A9342C-CEC4-4E3D-86DC-E716D6957DE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15A9342C-CEC4-4E3D-86DC-E716D6957DE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15A9342C-CEC4-4E3D-86DC-E716D6957DE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15A9342C-CEC4-4E3D-86DC-E716D6957DE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

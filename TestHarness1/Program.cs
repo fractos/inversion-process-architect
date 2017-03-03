@@ -8,6 +8,7 @@ using Inversion.Process;
 using Inversion.Process.Architect;
 using Inversion.Process.Behaviour;
 using Inversion.Process.Pipeline;
+using TestHarness1.Code.Data;
 using TestHarness1.Constructs;
 
 namespace TestHarness1
@@ -34,12 +35,17 @@ namespace TestHarness1
 
             serviceContainer.RegisterService("request-behaviours", requestBehaviourConstructs.Construct());
 
+            serviceContainer.RegisterServiceNonSingleton("store-user",
+                container => new NullUserStore());
+
             ProcessContext context = new ProcessContext(serviceContainer, FileSystemResourceAdapter.Instance);
 
             IList<IProcessBehaviour> requestBehaviours =
                 context.Services.GetService<IList<IProcessBehaviour>>("request-behaviours");
 
             context.Register(requestBehaviours);
+
+            context.Params["id"] = "123";
 
             context.Fire("process-request");
 
