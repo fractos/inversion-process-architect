@@ -37,7 +37,7 @@ namespace Inversion.Process.Architect
         {
             if (!self["config"].Contains(slot))
             {
-                throw new ArgumentException(String.Format("config {0} not found", slot));
+                throw new ArgumentException(String.Format("config '{0}' not found", slot));
             }
 
             return configuration.GetNameWithAssert(frame, slot);
