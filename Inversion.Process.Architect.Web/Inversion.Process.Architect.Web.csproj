@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AE173214-4250-47B3-B6AB-023134C6458B}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{15A9342C-CEC4-4E3D-86DC-E716D6957DE4}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TestHarness1</RootNamespace>
-    <AssemblyName>TestHarness1</AssemblyName>
+    <RootNamespace>Inversion.Process</RootNamespace>
+    <AssemblyName>Inversion.Process.Architect.Web</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -37,24 +34,20 @@
       <HintPath>..\packages\Inversion.1.0.0\lib\net452\Inversion.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Inversion.Data, Version=1.0.6265.22006, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Inversion.Data.1.0.6265.22006\lib\net452\Inversion.Data.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Inversion.Extensibility, Version=1.0.6265.17021, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Inversion.Extensibility.1.0.6265.17021\lib\net452\Inversion.Extensibility.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Inversion.Naiad, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Inversion.Naiad.1.0.0\lib\net452\Inversion.Naiad.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Inversion.Process, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Inversion.Process.1.0.0\lib\net452\Inversion.Process.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Inversion.Web, Version=1.0.6270.24407, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Inversion.Web.1.0.6270.24407\lib\net452\Inversion.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RazorEngine, Version=3.4.1.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
+      <HintPath>..\packages\RazorEngine.3.4.1\lib\net45\RazorEngine.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -79,7 +72,10 @@
       <HintPath>..\packages\Rx-PlatformServices.2.2.5\lib\net45\System.Reactive.PlatformServices.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -88,21 +84,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Code\Behaviour\ConsoleWriteBehaviour.cs" />
-    <Compile Include="Code\Behaviour\ExampleBehaviour.cs" />
-    <Compile Include="Code\Constructs\ExampleConstruct.cs" />
-    <Compile Include="Code\Constructs\BootstrapConstruct.cs" />
-    <Compile Include="Code\Constructs\ProcessRequestConstruct.cs" />
-    <Compile Include="Code\Data\IUserStore.cs" />
-    <Compile Include="Code\Data\NullUserStore.cs" />
-    <Compile Include="Code\Data\User.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Architect\TaoWebBehaviour.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -111,7 +96,6 @@
       <Name>Inversion.Process.Architect</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

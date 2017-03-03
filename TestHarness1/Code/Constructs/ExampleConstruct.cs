@@ -18,6 +18,12 @@ namespace TestHarness1.Constructs
                     {
                         {"config", "output-key", "user"},
                         {"config", "emit-this-message", "user-loaded" }
+                    }),
+
+                new ConsoleWriteBehaviour("user-loaded",
+                    new Configuration.Builder
+                    {
+                        {"config", "message", "user-loaded event fired" }
                     })
             };
         }
