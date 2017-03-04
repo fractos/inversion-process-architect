@@ -10,7 +10,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Inversion.Process.Architect.Tests
 {
     [TestClass]
-    public class TestConstructs
+    public class TestConstructs : IDisposable
     {
         protected IServiceContainer serviceContainer;
         protected IServiceContainerQuery query;
@@ -75,6 +75,17 @@ namespace Inversion.Process.Architect.Tests
             context.Fire("process-request");
 
             Assert.IsTrue(context.IsFlagged("hello"));
+        }
+
+        public void Dispose()
+        {
+            this.Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool dispose)
+        {
+            this.serviceContainer.Dispose();
         }
     }
 }
