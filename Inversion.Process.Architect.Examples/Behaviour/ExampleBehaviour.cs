@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Inversion.Extensibility.Extensions;
-using Inversion.Process;
-using Inversion.Process.Architect;
+using Inversion.Process.Architect.Examples.Data;
 using Inversion.Process.Behaviour;
-using TestHarness1.Code.Data;
 
-namespace TestHarness1.Code.Behaviour
+namespace Inversion.Process.Architect.Examples.Behaviour
 {
     public class ExampleBehaviour : TaoBehaviour
     {

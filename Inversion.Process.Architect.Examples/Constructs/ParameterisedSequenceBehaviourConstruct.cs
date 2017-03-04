@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Inversion.Process.Behaviour;
 using Inversion.Process.Pipeline;
 
-namespace Inversion.Process.Architect.Tests.Constructs
+namespace Inversion.Process.Architect.Examples.Constructs
 {
     public class ParameterisedSequenceBehaviourConstruct : Construct
     {

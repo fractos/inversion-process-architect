@@ -1,7 +1,6 @@
-﻿using System;
-using Inversion.Data;
+﻿using Inversion.Data;
 
-namespace TestHarness1.Code.Data
+namespace Inversion.Process.Architect.Examples.Data
 {
     public class NullUserStore : StoreBase, IUserStore
     {

@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using Inversion.Data;
 using Inversion.Process;
 using Inversion.Process.Architect;
+using Inversion.Process.Architect.Examples.Constructs;
+using Inversion.Process.Architect.Examples.Data;
 using Inversion.Process.Behaviour;
 using Inversion.Process.Pipeline;
-using TestHarness1.Code.Data;
-using TestHarness1.Constructs;
 
 namespace TestHarness1
 {

@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
-using Inversion.Process;
 using Inversion.Process.Architect;
+using Inversion.Process.Architect.Examples.Behaviour;
 using Inversion.Process.Behaviour;
 using Inversion.Process.Pipeline;
-using TestHarness1.Code.Behaviour;
 
-namespace TestHarness1.Constructs
+namespace Inversion.Process.Architect.Examples.Constructs
 {
     public class ExampleConstruct : Construct
     {

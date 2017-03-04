@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-
-using Inversion.Process;
 using Inversion.Process.Architect;
 using Inversion.Process.Behaviour;
 
-namespace TestHarness1.Code.Behaviour
+namespace Inversion.Process.Architect.Examples.Behaviour
 {
     public class ConsoleWriteBehaviour : TaoBehaviour
     {

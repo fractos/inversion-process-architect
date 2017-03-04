@@ -6,14 +6,14 @@ using Inversion.Web.Behaviour;
 
 namespace Inversion.Process.Architect
 {
-    public abstract class TaoWebBehaviour : PrototypedWebBehaviour
+    public abstract class TaoWebBehaviour : PrototypedWebBehaviour, ITaoBehaviour
     {
         // define expected services
         // define expected context members (parameters, control-state members, flags)
         // define expected configuration values
         // define emitted messages
 
-        public IDictionary<string, IList<string>> Praxis = TaoBase.BasePraxis;
+        public IDictionary<string, IList<string>> Praxis { get; } = TaoBase.NewPraxis;
 
         protected TaoWebBehaviour(string respondsTo) : base(respondsTo) { }
         protected TaoWebBehaviour(string respondsTo, IPrototype prototype) : base(respondsTo, prototype) { }

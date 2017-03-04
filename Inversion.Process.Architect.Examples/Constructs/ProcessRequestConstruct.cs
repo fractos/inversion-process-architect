@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using Inversion.Process;
+﻿using System.Collections.Generic;
 using Inversion.Process.Architect;
 using Inversion.Process.Behaviour;
 using Inversion.Process.Pipeline;
 
-namespace TestHarness1.Constructs
+namespace Inversion.Process.Architect.Examples.Constructs
 {
     public class ProcessRequestConstruct : Construct
     {

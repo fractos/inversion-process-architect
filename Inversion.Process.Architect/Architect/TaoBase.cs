@@ -6,7 +6,7 @@ namespace Inversion.Process.Architect
 {
     public static class TaoBase
     {
-        public static IDictionary<string, IList<string>> BasePraxis
+        public static IDictionary<string, IList<string>> NewPraxis
         {
             get
             {

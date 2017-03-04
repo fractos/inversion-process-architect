@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using Inversion.Data;
-using Inversion.Process.Architect.Tests.Constructs;
+using Inversion.Process.Architect.Examples.Behaviour;
+using Inversion.Process.Architect.Examples.Constructs;
 using Inversion.Process.Behaviour;
 using Inversion.Process.Pipeline;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -75,6 +76,76 @@ namespace Inversion.Process.Architect.Tests
             context.Fire("process-request");
 
             Assert.IsTrue(context.IsFlagged("hello"));
+        }
+
+        [TestMethod]
+        public void AggregateConstructWithOneTaoBehaviourContainsBasePraxis()
+        {
+            Settings settings = new Settings(new Dictionary<string, string>
+            {
+                {"world", "world" }
+            });
+
+            Construct construct = new Construct
+            {
+                Message = "process-request",
+                Settings = settings,
+                Behaviours = new List<IProcessBehaviour>
+                {
+                    new ExampleBehaviour("process-request")
+                }
+            };
+
+            IDictionary<string, IList<string>> aggregatePraxis = construct.AggregatePraxis;
+            
+            foreach(KeyValuePair<string, IList<string>> kvp in aggregatePraxis)
+            {
+                foreach(string value in kvp.Value)
+                {
+                    Assert.IsTrue(aggregatePraxis.ContainsKey(kvp.Key));
+                    Assert.IsTrue(aggregatePraxis[kvp.Key].Contains(value));
+                }
+            }
+        }
+        [TestMethod]
+        public void AggregateConstructWithOneTaoBehaviourContainsBehaviourPraxis()
+        {
+            Settings settings = new Settings(new Dictionary<string, string>
+            {
+                {"world", "world" }
+            });
+
+            ExampleBehaviour exampleBehaviour = new ExampleBehaviour("process-request");
+
+            Construct construct = new Construct
+            {
+                Message = "process-request",
+                Settings = settings,
+                Behaviours = new List<IProcessBehaviour>
+                {
+                    exampleBehaviour
+                }
+            };
+
+            IDictionary<string, IList<string>> aggregatePraxis = construct.AggregatePraxis;
+
+            foreach (KeyValuePair<string, IList<string>> kvp in aggregatePraxis)
+            {
+                foreach (string value in kvp.Value)
+                {
+                    Assert.IsTrue(aggregatePraxis.ContainsKey(kvp.Key));
+                    Assert.IsTrue(aggregatePraxis[kvp.Key].Contains(value));
+                }
+            }
+
+            foreach (KeyValuePair<string, IList<string>> kvp in exampleBehaviour.Praxis)
+            {
+                foreach (string value in kvp.Value)
+                {
+                    Assert.IsTrue(exampleBehaviour.Praxis.ContainsKey(kvp.Key));
+                    Assert.IsTrue(exampleBehaviour.Praxis[kvp.Key].Contains(value));
+                }
+            }
         }
 
         public void Dispose()

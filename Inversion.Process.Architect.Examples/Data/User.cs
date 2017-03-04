@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace TestHarness1.Code.Data
+﻿namespace Inversion.Process.Architect.Examples.Data
 {
     public class User
     {

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inversion.Process.Architect
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inversion.Process.Architect.Web", "Inversion.Process.Architect.Web\Inversion.Process.Architect.Web.csproj", "{15A9342C-CEC4-4E3D-86DC-E716D6957DE4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inversion.Process.Architect.Examples", "Inversion.Process.Architect.Examples\Inversion.Process.Architect.Examples.csproj", "{ED732188-07AA-4A7B-80ED-27EE2F60A742}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{15A9342C-CEC4-4E3D-86DC-E716D6957DE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15A9342C-CEC4-4E3D-86DC-E716D6957DE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15A9342C-CEC4-4E3D-86DC-E716D6957DE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED732188-07AA-4A7B-80ED-27EE2F60A742}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED732188-07AA-4A7B-80ED-27EE2F60A742}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED732188-07AA-4A7B-80ED-27EE2F60A742}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED732188-07AA-4A7B-80ED-27EE2F60A742}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

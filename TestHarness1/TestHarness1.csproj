@@ -88,14 +88,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Code\Behaviour\ConsoleWriteBehaviour.cs" />
-    <Compile Include="Code\Behaviour\ExampleBehaviour.cs" />
-    <Compile Include="Code\Constructs\ExampleConstruct.cs" />
-    <Compile Include="Code\Constructs\BootstrapConstruct.cs" />
-    <Compile Include="Code\Constructs\ProcessRequestConstruct.cs" />
-    <Compile Include="Code\Data\IUserStore.cs" />
-    <Compile Include="Code\Data\NullUserStore.cs" />
-    <Compile Include="Code\Data\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -106,12 +98,18 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Inversion.Process.Architect.Examples\Inversion.Process.Architect.Examples.csproj">
+      <Project>{ed732188-07aa-4a7b-80ed-27ee2f60a742}</Project>
+      <Name>Inversion.Process.Architect.Examples</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Inversion.Process.Architect\Inversion.Process.Architect.csproj">
       <Project>{c6f37a88-53be-4543-a542-f8b6dfa8760f}</Project>
       <Name>Inversion.Process.Architect</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Code\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

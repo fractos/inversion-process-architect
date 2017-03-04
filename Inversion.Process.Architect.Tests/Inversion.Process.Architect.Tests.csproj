@@ -39,6 +39,10 @@
       <HintPath>..\packages\Inversion.1.0.0\lib\net452\Inversion.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Inversion.Data, Version=1.0.6265.22006, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Inversion.Data.1.0.6265.22006\lib\net452\Inversion.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Inversion.Extensibility, Version=1.0.6265.17021, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Inversion.Extensibility.1.0.6265.17021\lib\net452\Inversion.Extensibility.dll</HintPath>
       <Private>True</Private>
@@ -76,6 +80,7 @@
       <HintPath>..\packages\Rx-PlatformServices.2.2.5\lib\net45\System.Reactive.PlatformServices.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Runtime.Caching" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -90,9 +95,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Constructs\BootstrapConstruct.cs" />
-    <Compile Include="Constructs\ProcessRequestConstruct.cs" />
-    <Compile Include="Constructs\ParameterisedSequenceBehaviourConstruct.cs" />
     <Compile Include="TestConstructs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -100,6 +102,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Inversion.Process.Architect.Examples\Inversion.Process.Architect.Examples.csproj">
+      <Project>{ed732188-07aa-4a7b-80ed-27ee2f60a742}</Project>
+      <Name>Inversion.Process.Architect.Examples</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Inversion.Process.Architect\Inversion.Process.Architect.csproj">
       <Project>{c6f37a88-53be-4543-a542-f8b6dfa8760f}</Project>
       <Name>Inversion.Process.Architect</Name>

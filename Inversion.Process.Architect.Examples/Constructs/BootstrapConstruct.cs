@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using Inversion.Process.Architect;
 using Inversion.Process.Behaviour;
 using Inversion.Process.Pipeline;
 
-namespace Inversion.Process.Architect.Tests.Constructs
+namespace Inversion.Process.Architect.Examples.Constructs
 {
     public class BootstrapConstruct : Construct
     {
